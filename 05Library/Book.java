@@ -38,6 +38,6 @@ public class Book{
     }
 
     public String toString(){
-	return title + ", " + author + ", " + ISBN + "\n";
+	return getTitle() + ", " + getAuthor() + ", " + getISBN() + "\n";
     }
 }
