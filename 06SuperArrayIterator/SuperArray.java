@@ -1,10 +1,12 @@
+import java.util.Iterator;
+
+
 public class SuperArray implements Iterable<String>{
     private String[] data;
     private int size;
 
     public Iterator<String> iterator(){
-	return null;
-	//CHANGE
+	return new SuperArrayIterator(this);
     }
     
     public SuperArray(){
