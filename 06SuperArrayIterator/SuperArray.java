@@ -1,6 +1,11 @@
-public class SuperArray{
+public class SuperArray implements Iterable<String>{
     private String[] data;
     private int size;
+
+    public Iterator<String> iterator(){
+	return null;
+	//CHANGE
+    }
     
     public SuperArray(){
 	data = new String[10];
