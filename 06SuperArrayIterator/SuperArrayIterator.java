@@ -16,6 +16,6 @@ public class SuperArrayIterator implements Iterator<String>{
     }
 
     public boolean hasNext(){
-	return current < end;
+	return current <=  end;
     }
 }
