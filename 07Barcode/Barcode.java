@@ -31,10 +31,15 @@ public class Barcode implements Comparable<Barcode>{
   }
 
   private char checkSum(){
-    return '0';
+    int total = 0;
+    for(int i = 0;i < 5; i++){
+      total += Character.getNumericValue(getZip().charAt(i));
+    }
+    return (char)('0' + (total % 10));
   }
 
   private String convertToBar(char a){
-    return "";
+    String[] code = {"||:::",":::||","::|:|","::||:",":|::|",":|:|:",":||::","|:::|","|::|:","|:|::"};
+    return code[Character.getNumericValue(a)];
   }
 }
