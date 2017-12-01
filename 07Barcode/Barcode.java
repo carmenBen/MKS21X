@@ -1,4 +1,4 @@
-public class Java implements Comparable<Barcode>{
+public class Barcode implements Comparable<Barcode>{
   private String zip;
 
   public Barcode(String code){
@@ -12,9 +12,10 @@ public class Java implements Comparable<Barcode>{
   public String getBar(){
     String total = "|";
     for(int i = 0; i < 5;i++){
-      total += getZip().charAt(i).convertToBar();
+      total += convertToBar(getZip().charAt(i));
     }
-    total += checkSum().convertToBar() + "|";
+    total += convertToBar(checkSum()) + "|";
+    return total;
   }
 
   public String toString(){
@@ -27,5 +28,13 @@ public class Java implements Comparable<Barcode>{
 
   public boolean equals(Barcode other){
     return getZip().equals(other.getZip());
+  }
+
+  private char checkSum(){
+    return '0';
+  }
+
+  private String convertToBar(char a){
+    return "";
   }
 }
