@@ -30,7 +30,8 @@ public class ReversedCharSequence implements CharSequence{
 	return data;
     }
     
-    public CharSequence subSequence(int start,int end){
-	return data.substring(start,end);
+    public ReversedCharSequence subSequence(int start,int end){
+	ReversedCharSequence test =  new ReversedCharSequence(data.substring(start,end));
+	return new ReversedCharSequence(test.toString());
     }
 }
