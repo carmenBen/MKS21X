@@ -56,6 +56,13 @@ public class Sorts{
   }
 
     public static void bubbleSort(int[] ary){
+	for(int i = 0;i < ary.length - 1;i++){
+	    for(int j = 0;j < ary.length - (i + 1);j++){
+		if(ary[j] > ary[j+1]){
+		    swap(ary,j,j+1);
+		}
+	    }
+	}
     }
 
   private static void swap(int[]ary,int a, int b){
@@ -73,7 +80,8 @@ public class Sorts{
     System.out.println(Arrays.toString(randish));
     //      bogoSort(randish);
     // selectionSort(randish);
-    insertionSort(randish);
+    //insertionSort(randish);
+    bubbleSort(randish);
     System.out.println(Arrays.toString(randish));
 
   }
