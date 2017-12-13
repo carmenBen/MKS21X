@@ -9,8 +9,12 @@ public class Window  extends JFrame  implements ActionListener{
 
   public void actionPerformed(ActionEvent e){
     String s = e.getActionCommand();
-    System.out.println(s);
-    
+    if(s.equals("Convert to Celsius")){
+      t.setText("" + Temp.FtoC(Double.parseDouble(t.getText())));
+    }
+    if(s.equals("Convert to Fahrenheit")){
+      t.setText("" + Temp.CtoF(Double.parseDouble(t.getText())));
+    } 
   }
  
   //CONSTRUCTOR SETS EVERYTHING UP
