@@ -4,7 +4,7 @@ import java.awt.event.*;
 public class Window  extends JFrame{
   private Container pane;
 
-  private JButton CtoF, FtoC;
+  private JButton C, F;
   private JTextField t;
  
   //CONSTRUCTOR SETS EVERYTHING UP
@@ -13,6 +13,17 @@ public class Window  extends JFrame{
     this.setLocation(100,100);
     this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
+    pane = this.getContentPane();
+    pane.setLayout(new FlowLayout());
+
+    F = new JButton("Convert to Fahrenheit");
+    C = new JButton("Convert to Celsius");
+    t = new JTextField(12);
+
+    pane.add(C);
+    pane.add(F);
+    pane.add(t);
+          
   }
 
   //MAIN JUST INSTANTIATES + MAKE VISIBLE
