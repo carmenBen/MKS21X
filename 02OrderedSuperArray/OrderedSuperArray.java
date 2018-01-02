@@ -26,8 +26,8 @@ public class OrderedSuperArray extends SuperArray{
     public boolean add(String value){
 	//add to the correct spot.
 	//you may still use super.add(index,value)
-
 	int index = this.findIndexOfBinary(value);
+	System.out.println("yes");
 	super.add(index,value);
 	return true;
     }
